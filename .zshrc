@@ -114,6 +114,9 @@ function gitac() {
 	elif [[ $1 = Bug/* ]]
 	then
 		git commit -m "🐛 $1"
+	elif [[ $1 = Hotfix/* ]]
+	then
+		git commit -m "🔥 $1"
 	elif [[ $1 = Docs/* ]]
 	then
 		git commit -m "📚 $1"
