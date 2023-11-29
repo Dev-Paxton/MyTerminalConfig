@@ -11,7 +11,7 @@
 
 ### Install
 ```bash
-git clone https://github.com/DevGoro/MyTerminalConfig.git
+git clone https://github.com/Dev-Paxton/MyTerminalConfig.git
 cd MyTerminalConfig
 ./setup.sh
 ```
