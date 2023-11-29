@@ -20,6 +20,6 @@ chsh -s $(which zsh)
 
 cp ./.hyper.js ~
 cp ./.zshrc ~
-cp ./custom_theme.zsh-theme ~/.oh-my-zsh/themes/custom_theme.zsh-theme
+cp ./paxton-simple.zsh-theme ~/.oh-my-zsh/themes/paxton-simple.zsh-theme
 
 zsh

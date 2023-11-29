@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="devibe-simple"
+ZSH_THEME="paxton-simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -99,3 +99,47 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 bindkey -s "^s" "~/scripts/"
+
+function gitac() {
+	git add -A
+
+	if [[ $1 = "Initial commit" ]]
+	then
+		git commit -m "🎉 Initial commit"
+	
+	elif [[ $1 = Feature/* ]]
+	then
+		git commit -m "✨ $1"
+
+	elif [[ $1 = Bug/* ]]
+	then
+		git commit -m "🐛 $1"
+	elif [[ $1 = Docs/* ]]
+	then
+		git commit -m "📚 $1"
+
+	elif [[ $1 = Perf/* ]]
+	then
+		git commit -m "🚀 $1"
+
+	elif [[ $1 = Test/* ]]
+	then
+		git commit -m "🚨 $1"
+
+	elif [[ $1 = "Updated dependencies" ]]
+	then
+		git commit -m "⬆️ Updated dependencies"
+
+	elif [[ $1 = "Version bump" ]]
+	then
+		git commit -m "🔖 Version bump"
+		
+	else
+		echo "No commit type was recognized"
+		read "?Commit anyway? [y/n] " c
+		if [[ $c = "y" ]]
+		then
+			git commit -m "$1"
+		fi
+	fi
+}
