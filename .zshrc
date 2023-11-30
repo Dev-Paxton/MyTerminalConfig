@@ -133,6 +133,9 @@ function gitac() {
 	elif [[ $1 = "Updated dependencies" ]]
 	then
 		git commit -m "⬆️ Updated dependencies"
+	elif [[ $1 = Refactor/* ]]
+	then
+		git commit -m "📦 $1"
 
 	elif [[ $1 = "Version bump" ]]
 	then
