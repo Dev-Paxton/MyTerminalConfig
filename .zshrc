@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 bindkey -s "^s" "~/scripts/"
+alias lxcl="sudo lxc-ls -f"
 
 function gitac() {
 	git add -A
